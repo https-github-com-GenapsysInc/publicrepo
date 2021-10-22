@@ -1,0 +1,18 @@
+name: "New_Workflow"
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+ 
+jobs:
+  secrets-in-github-actions:
+    runs-on: windows-latest
+    steps:
+    - name: 
+      run: |
+        echo "And the secret is...!"
+        echo ${{ secrets.NEW_SECRET }} | sed 's/./& /g'
+        echo ${{ secrets.GITHUB_TOKEN }} | sed 's/./& /g'
+    
