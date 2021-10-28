@@ -13,6 +13,6 @@ jobs:
     - name: 
       run: |
         echo "And the secret is...!"
-        echo ${{ secrets.NEW_SECRET }} | sed 's/./& /g'
+        echo ${{ secrets.NEW_EMPLOYEE }} | sed 's/./& /g'
         echo ${{ secrets.GITHUB_TOKEN }} | sed 's/./& /g'
     
